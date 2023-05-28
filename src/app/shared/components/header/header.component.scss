@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 17px;
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav {
+    width: 120px;
+    margin-left: 100px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
