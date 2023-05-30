@@ -1,4 +1,5 @@
 import { Component , OnInit} from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
@@ -11,7 +12,8 @@ export class RegisterPageComponent implements OnInit {
 
   constructor(
     private formBuilder : FormBuilder,
-    private auth : AuthService
+    private auth : AuthService,
+    private router : Router
   ){}
 
 
@@ -40,8 +42,12 @@ export class RegisterPageComponent implements OnInit {
 
     this.auth.registerUser(user)
       .subscribe(
-        res => console.log(res),
-        err => console.log(err)
+        res => {
+          console.log(res)
+          localStorage.setItem('token', res.token)
+          this.router.navigate(['/special'])
+        },
+        err => console.log(err) 
       )
   }
 

@@ -3,4 +3,33 @@
     height: 250px;
     border-radius: 12px;
     border: 1px solid black;
+    margin: 10px;
+}
+h3 {
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 5px;
+}
+a {
+    width: 120px;
+    display: block;
+    text-decoration: none;
+    background-color: red;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+}
+.date {
+    border-top: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
 }

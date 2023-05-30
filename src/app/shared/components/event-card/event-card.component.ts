@@ -7,6 +7,6 @@ import { Component , Input} from '@angular/core';
 })
 export class EventCardComponent {
 
-  @Input() events :any
+  @Input() events :any;
 
 }

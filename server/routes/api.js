@@ -2,6 +2,7 @@ const express = require('express');
 const { default: mongoose } = require('mongoose');
 const router = express.Router()
 const User = require('../models/user')
+const jwt = require('jsonwebtoken')
 
 const db = 'mongodb+srv://Tornike:ChooseYourPassword1@events-db.gc9hf4s.mongodb.net/';
 
@@ -21,7 +22,9 @@ router.post('/register', (req, res) => {
         if (error) {
             console.log(error)
         }else {
-            res.status(200).send(registerUser)
+            let payload = { subject : registerUser._id }
+            let token = jwt.sign(payload, 'key')
+            res.status(200).send({token})
         }
     })
 })
@@ -39,7 +42,9 @@ router.post('/login', (req, res) => {
         if (user.password !== userData.password) {
             res.status(401).send('Invalid password')
         }else {
-            res.status(200).send(user)
+            let payload = { subject : user._id }
+            let token =  jwt.sign(payload, 'key')
+            res.status(200).send({ token })
         }
     })
 })
@@ -81,7 +86,19 @@ router.get('/events', (req,res) => {
         "name": "Auto Expo",
         "description": "lorem ipsum",
         "date": "2012-04-23T18:25:43.511Z"
-      }
+      },
+      {
+        "_id": "7",
+        "name": "Auto Expo",
+        "description": "lorem ipsum",
+        "date": "2012-04-23T18:25:43.511Z"
+      },
+      {
+        "_id": "8",
+        "name": "Auto Expo",
+        "description": "lorem ipsum",
+        "date": "2012-04-23T18:25:43.511Z"
+      },
     ]
     res.json(events)
   })
@@ -90,7 +107,7 @@ router.get('/events', (req,res) => {
     let events = [
       {
         "_id": "1",
-        "name": "Auto Expo",
+        "name": "Auto",
         "description": "lorem ipsum",
         "date": "2012-04-23T18:25:43.511Z"
       },
@@ -123,7 +140,19 @@ router.get('/events', (req,res) => {
         "name": "Auto Expo",
         "description": "lorem ipsum",
         "date": "2012-04-23T18:25:43.511Z"
-      }
+      },
+      {
+        "_id": "7",
+        "name": "Auto Expo",
+        "description": "lorem ipsum",
+        "date": "2012-04-23T18:25:43.511Z"
+      },
+      {
+        "_id": "8",
+        "name": "Auto Expo",
+        "description": "lorem ipsum",
+        "date": "2012-04-23T18:25:43.511Z"
+      },
     ]
     res.json(events)
   })

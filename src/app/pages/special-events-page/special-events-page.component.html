@@ -1,1 +1,5 @@
-<p>special-events-page works!</p>
+<div class="events container">
+    <div  *ngFor="let event of specialEvents">
+        <app-event-card [events]="event"></app-event-card>
+    </div>
+</div>
