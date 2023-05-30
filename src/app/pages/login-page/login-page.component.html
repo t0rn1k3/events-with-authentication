@@ -1,1 +1,12 @@
-<p>login-page works!</p>
+<div class="login">
+    <h3>Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <app-input [control]="$any(loginForm.get('email'))" [type]="'email'" [labelText]="'Email :'" ></app-input>
+        <app-input [control]="$any(loginForm.get('password'))" [type]="'password'" [labelText]="'Password :'" ></app-input>
+        <app-button [type]="'submit'" [text]="'Login'" [dissable]="loginForm.invalid"></app-button>
+    </form>
+    <div class="question">
+        <span>Don't you have an account yet?</span>
+        <a [routerLink]="'/register'">Register now</a>
+    </div>
+</div>
