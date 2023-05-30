@@ -17,6 +17,7 @@ import { SpecialEventsPageComponent } from './pages/special-events-page/special-
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { AuthService } from './shared/services/auth.service';
 import { EventService } from './shared/services/event.service';
+import { AuthGuard } from './shared/guards/auth.guard';
 ``
 
 @NgModule({
@@ -38,7 +39,8 @@ import { EventService } from './shared/services/event.service';
   ],
   providers: [
     AuthService,
-    EventService
+    EventService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
