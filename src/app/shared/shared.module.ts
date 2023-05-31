@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
@@ -17,7 +19,9 @@ import { ButtonComponent } from './components/button/button.component';
     imports: [
       RouterModule, 
       ReactiveFormsModule,
-      FormsModule
+      FormsModule,
+      BrowserModule,
+      CommonModule
     ],
     exports: [
       HeaderComponent,

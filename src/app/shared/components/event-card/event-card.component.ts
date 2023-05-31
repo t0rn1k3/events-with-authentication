@@ -1,4 +1,5 @@
 import { Component , Input} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-card',
@@ -6,6 +7,10 @@ import { Component , Input} from '@angular/core';
   styleUrls: ['./event-card.component.scss']
 })
 export class EventCardComponent {
+
+  constructor(
+    public routerLink : Router
+  ){}
 
   @Input() events :any;
 

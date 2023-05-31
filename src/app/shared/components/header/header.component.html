@@ -12,7 +12,8 @@
     </div>
     <div class="auth">
         <div class="login">
-            <a routerLink="/login">Login</a>
+            <a routerLink="/login" *ngIf="!auth.loggedIn()" >Login</a>
+            <a style="cursor : pointer"  *ngIf="auth.loggedIn()" (click)="auth.logOutUser()" >LogOut</a>
         </div>
     </div>
 </div>

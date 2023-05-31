@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
@@ -36,7 +37,8 @@ import { AuthGuard } from './shared/guards/auth.guard';
     RouterModule, 
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [
     AuthService,
@@ -45,7 +47,7 @@ import { AuthGuard } from './shared/guards/auth.guard';
     {
       provide : HTTP_INTERCEPTORS,
       useClass : TokenInterceptorService,
-      multi : true 
+      multi : true   
     }
   ],
   bootstrap: [AppComponent]
