@@ -1,9 +1,13 @@
+@import 'src/assets/styles/colors';
+
+
 .register {
     width: 400px;
     border-radius: 12px;
     margin: 100px auto;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid $color-4;
+    color: $color-4;
 }
 h3 {
     font-size: 20px;

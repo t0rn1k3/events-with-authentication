@@ -1,8 +1,10 @@
+@import 'src/assets/styles/colors';
+
 .event-card {
     width: 300px;
     height: 250px;
     border-radius: 12px;
-    border: 1px solid black;
+    border: 1px solid $color-4;
     margin: 10px;
 }
 h3 {
@@ -20,16 +22,17 @@ a {
     width: 120px;
     display: block;
     text-decoration: none;
-    background-color: red;
+    background-color: $color-3;
     padding: 15px;
     border-radius: 8px;
-    color: white;
+    color: $color-1;
     margin: 20px auto;
     text-align: center;
 }
 .date {
-    border-top: 1px solid black;
+    border-top: 1px solid $color-4;
     padding: 10px;
     text-align: center;
     font-size: 18px;
+    border-radius: 0 0 8px 8px;
 }

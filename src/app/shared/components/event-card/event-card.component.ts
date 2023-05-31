@@ -14,4 +14,6 @@ export class EventCardComponent {
 
   @Input() events :any;
 
+  today: number = Date.now();
+
 }

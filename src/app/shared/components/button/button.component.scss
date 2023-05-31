@@ -1,3 +1,6 @@
+@import 'src/assets/styles/colors';
+
+
 button {
     width: 50%;
     border-radius: 8px;
@@ -5,4 +8,6 @@ button {
     margin: 7px auto;
     border: 0;
     cursor: pointer;
+    background-color: $color-3;
+    color: $color-1;
 }

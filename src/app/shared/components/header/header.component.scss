@@ -1,3 +1,6 @@
+@import 'src/assets/styles/colors';
+
+
 .header {
     display: flex;
     align-items: center;
@@ -11,7 +14,7 @@
     justify-content: space-between;
 }
 .nav {
-    width: 120px;
+    width: 200px;
     margin-left: 100px;
 }
 ul {
@@ -22,4 +25,8 @@ ul {
 }
 a{
     text-decoration: none;
+    padding: 10px  15px;
+    background-color: $color-4;
+    color: $color-1;
+    border-radius: 20px;
 }

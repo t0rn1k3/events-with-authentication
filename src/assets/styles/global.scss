@@ -1,3 +1,6 @@
+@import 'src/assets/styles/fonts';
+@import 'src/assets/styles/colors';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +9,8 @@
 .container {
     width: 85%;
     margin: 50px auto;
+}
+body {
+    background-color: $color-1;
+    font-family: $baskerville;
 }
